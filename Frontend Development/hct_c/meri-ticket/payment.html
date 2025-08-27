@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book your show now!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(106, 108, 150);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        .container {
+            margin: 10vh auto;
+            width: 50%;
+            max-width: 500px;
+            border: 2px solid rgb(106, 108, 150);
+            background-color: #fcfcfc;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .top {
+            background-color: rgb(106, 108, 150);
+            text-align: center;
+            padding: 15px;
+            color: white;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .contact {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .normal {
+            font-size: 18px;
+        }
+
+        .main {
+            margin: 20px;
+        }
+
+        fieldset {
+            border: 2px solid rgb(106, 108, 150);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-size: 24px;
+            color: rgb(106, 108, 150);
+            font-weight: bold;
+        }
+
+        .label,
+        .select-label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: rgb(106, 108, 150);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="datetime-local"],
+        select {
+            width: calc(100% - 20px);
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid rgb(106, 108, 150);
+            margin-top: 8px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .select-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .select-container select {
+            flex-grow: 1;
+        }
+
+        .submit {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .submitbutton {
+            background-color: rgb(106, 108, 150);
+            height: 40px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: calc(100% - 20px);
+            font-size: 18px;
+            outline: none;
+        }
+
+        .submitbutton:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="top">
+            <div class="contact">Time to Book!</div>
+            <div class="normal">Fill these basic details to Book Ticket</div>
+        </header>
+        <main class="main">
+            <form>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="name">
+                        <label for="inputname" class="label">Your Name:</label>
+                        <input type="text" id="inputname" placeholder="Your full Name" required>
+                    </div>
+                    <div class="email">
+                        <label for="inputemail" class="label">Your Email:</label>
+                        <input type="email" id="inputemail" placeholder="Your Email" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Booking Details</legend>
+                    <div class="movie">
+                        <label for="inputmovie" class="label">Movie Name:</label>
+                        <input type="text" id="inputmovie" placeholder="Enter Movie Name" required>
+                    </div>
+                    <div class="date">
+                        <label for="inputdate" class="label">Date:</label>
+                        <input type="datetime-local" id="inputdate" required>
+                    </div>
+                    <div class="location">
+                        <label for="selectlocation" class="label">Theatre and Location:</label>
+                        <div class="select-container">
+                            <select id="selectlocation" required>
+                                <option value="" selected>Select</option>
+                                <option value="">Jalandhar, PVR</option>
+                                <option value="">Jalandhar, Inox</option>
+                                <option value="">Amritsar, PVR</option>
+                                <option value="">Amritsar, Inox</option>
+                                <option value="">Chandigarh, PVR</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="subject">
+                        <label for="selectsubject" class="select-label">No. of Tickets:</label>
+                        <select id="selectsubject" required>
+                            <option value="" selected>Select</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">Enter manually</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Payment Information</legend>
+                    <div class="query" style="margin-bottom: 40px;">
+                        <label for="yourquery" class="label">Payment By UPI:</label><br>
+                        <span id="yourquery"><a href="Pay.html">Click here to Scan</a></span>
+                    </div>
+                </fieldset>
+
+                <div class="submit" onclick="alert('Ticket booked successfully')">
+                    <input type="submit" class="submitbutton" value="Book Ticket">
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>

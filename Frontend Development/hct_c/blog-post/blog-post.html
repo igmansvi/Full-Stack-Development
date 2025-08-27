@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogsphere</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        section {
+            padding: 20px;
+            flex: 1;
+            position: relative;
+        }
+        section img {
+            width: 100%;
+            height: auto;
+        }
+        section .overlay {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(0%, -50%);
+            color: #fff;
+        }
+        .text-section {
+            padding: 20px;
+            background-color: #fff;
+            color: #555;
+            text-align: left;
+            width: 50%;
+            position: relative;
+            margin-top: 50px;
+        }
+        .text-section h3 {
+            font-size: 2em;
+            line-height: 1.2em;
+            margin-bottom: 20px;
+        }
+        .discover-section,
+        .express-section,
+        .community-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .discover-section img,
+        .express-section img,
+        .community-section img {
+            width: 40%;
+            height: auto;
+        }
+        .discover-section .text-box,
+        .express-section .text-box,
+        .community-section .text-box {
+            width: 50%;
+            text-align: left;
+            padding: 20px;
+        }
+        .discover-section .text-box h3,
+        .express-section .text-box h3,
+        .community-section .text-box h3 {
+            font-size: 2em;
+            line-height: 1.2em;
+            margin-bottom: 20px;
+        }
+        .discover-section .buttons,
+        .express-section .buttons,
+        .community-section .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .discover-section .buttons button,
+        .express-section .buttons button,
+        .community-section .buttons button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        nav a:nth-child(5),
+        section .overlay button,
+        .discover-section .buttons button,
+        .express-section .buttons button,
+        .community-section .buttons button {
+            background-color: orange;
+            color: #fff;
+        }
+        nav a:nth-child(5):hover,
+        section .overlay button:hover,
+        .discover-section .buttons button:hover,
+        .express-section .buttons button:hover,
+        .community-section .buttons button:hover {
+            background-color: #ff8c00;
+        }
+        .join-section {
+            background-color: orange;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            height: 70vh;
+        }
+        .join-section h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .join-section h3 {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .join-section button {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BlogSphere</h1>
+        <nav>
+            <a href="#top">Home</a>
+            <a href="blog-post-discover-page.html">Discover</a>
+            <a href="blog-post-posting-page.html">Express</a>
+            <a href="blog-post-community-page.html">Community</a>
+            <a href="blog-post-login-page.html" style="background-color: orange;">Start Blogging</a>
+        </nav>
+    </header>
+    <section>
+        <div style="position: relative;">
+            <img src="ew9vy6cwkmn8u0n8hqrf.jpg" alt="Blogging Image">
+            <div class="overlay">
+                <h2>Quote about Blogging</h2>
+                <p>Express yourself, share your thoughts, and connect with the world through blogging.</p>
+                <button style="background-color: orange; color: #fff; padding: 10px; border: none; cursor: pointer;" onclick="window.location.href='blog-post-posting-page.html'">Let's Blog</button>
+            </div>
+        </div>
+    </section>
+    <section class="text-section" id="build-connections">
+        <h3>Build<br>Connections<br>Through<br>Shared<br>Expressions</h3>
+    </section>
+    <section class="discover-section" id="discover-section">
+        <div class="text-box">
+            <h3>Discover New Reads</h3>
+            <p>Curate your reading list from our diverse blog library.</p>
+            <div class="buttons">
+                <button style="background-color: orange; color: #fff; padding: 10px; border: none; cursor: pointer;" onclick="window.location.href='blog-post-discover-page.html'">Browse Blogs</button>
+                <button style="background-color: #333; color: #fff; padding: 10px; border: none; cursor: pointer;" onclick="window.location.href='blog-post-community-page.html'">Recommend</button>
+            </div>
+        </div>
+        <img src="iaeh3fpf8fsmsczbrhds.jpg" alt="Discover New Reads Image">
+    </section>
+    <section class="express-section" id="express-section">
+        <img src="c1ewbq4xlsnpfkl934xe.jpg" alt="Express Yourself Image">
+        <div class="text-box">
+            <h3>Express Yourself</h3>
+            <p>Share your thoughts, ideas, and creativity with the world through our blogging platform.</p>
+            <div class="buttons">
+                <button style="background-color: orange; color: #fff; padding: 10px; border: none; cursor: pointer;" onclick="window.location.href='blog-post-login-page.html'">Start Blogging</button>
+                <button style="background-color: #333; color: #fff; padding: 10px; border: none; cursor: pointer;" onclick="window.location.href='blog-post-discover-page.html'">Get Inspired</button>
+            </div>
+        </div>
+    </section>
+    <section class="community-section" id="community-section">
+        <div class="text-box">
+            <h3>Engage with Community</h3>
+            <p>Interact, share insights, and foster intellectual stimulation within our blogging community.</p>
+            <div class="buttons">
+                <button style="background-color: orange; color: #fff; padding: 10px; border: none; cursor: pointer;" onclick="window.location.href='blog-post-login-page.html'">Participate</button>
+                <button style="background-color: #333; color: #fff; padding: 10px; border: none; cursor: pointer;" onclick="window.location.href='blog-post-posting-page.html'">Share Post</button>
+            </div>
+        </div>
+        <img src="nymrvz1wyzhexaeb9khs.jpg" alt="Engage with Community Image">
+    </section>
+    <section class="join-section">
+        <h1>Are You Ready to Join?</h1>
+        <h3>Become a part of BlogSphere and start your creative journey today.</h3>
+        <button onclick="window.location.href='blog-post-login-page.html'">Join Us</button>
+    </section>
+    <footer>
+        &copy; 2023 Blogsphere. All rights reserved.
+    </footer>
+</body>
+</html>

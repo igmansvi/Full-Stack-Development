@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogsphere</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        section {
+            padding: 20px;
+            flex: 1;
+            position: relative;
+        }
+        section img {
+            width: 100%;
+            height: auto;
+        }
+        section .overlay {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(0%, -50%);
+            color: #fff;
+        }
+        .community-section {
+            background-color: #f9f9f9;
+            padding: 50px 20px; /* Added padding to center the section */
+            text-align: center;
+        }
+        .community-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .profile-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .profile-card:hover {
+            transform: scale(1.05);
+        }
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .profile-details {
+            flex: 1;
+        }
+        .profile-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .profile-card p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .profile-card button {
+            background-color: #333;
+            color: #fff;
+            padding: 12px; /* Adjusted padding for a consistent height */
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 10px;
+            width: 100px; /* Added width for a consistent width */
+            box-sizing: border-box; /* Ensures that padding is included in the width */
+        }
+        .profile-card button:hover {
+            background-color: #555;
+        }
+        .join-section {
+            background-color: orange;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            height: 70vh;
+        }
+        .join-section h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .join-section h3 {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .join-section button {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BlogSphere</h1>
+        <nav>
+            <a href="blog-post.html">Home</a>
+            <a href="blog-post-discover-page.html">Discover</a>
+            <a href="blog-post-posting-page.html">Express</a>
+            <a href="#top">Community</a>
+            <a href="blog-post-login-page.html" style="background-color: orange;">Start Blogging</a>
+        </nav>
+    </header>
+    <section>
+        <div style="position: relative;">
+            <img src="ew9vy6cwkmn8u0n8hqrf.jpg" alt="Blogging Image">
+            <div class="overlay">
+                <h2>Quote about Blogging</h2>
+                <p>Express yourself, share your thoughts, and connect with the world through blogging.</p>
+                <button style="background-color: orange; color: #fff; padding: 10px; border: none; cursor: pointer;" onclick="window.location.href='blog-post-posting-page.html'">Let's Blog</button>
+            </div>
+        </div>
+    </section>
+    <section class="community-section" id="community-section">
+        <h2>Community</h2>
+        <div class="profile-card">
+            <img src="profile1.jpg" alt="Profile 1">
+            <div class="profile-details">
+                <h3>User 1</h3>
+                <p>Short description of the user. Short description of the user.</p>
+            </div>
+            <div class="button-container">
+                <button>Add Friend</button>
+                <button>Delete Friend</button>
+            </div>
+        </div>
+        <div class="profile-card">
+            <img src="profile2.jpg" alt="Profile 2">
+            <div class="profile-details">
+                <h3>User 2</h3>
+                <p>Short description of the user. Short description of the user.</p>
+            </div>
+            <div class="button-container">
+                <button>Add Friend</button>
+                <button>Delete Friend</button>
+            </div>
+        </div>
+        <div class="profile-card">
+            <img src="profile3.jpg" alt="Profile 3">
+            <div class="profile-details">
+                <h3>User 3</h3>
+                <p>Short description of the user. Short description of the user.</p>
+            </div>
+            <div class="button-container">
+                <button>Add Friend</button>
+                <button>Delete Friend</button>
+            </div>
+        </div>
+    </section>
+    <section class="join-section">
+        <h1>Are You Ready to Join?</h1>
+        <h3>Become a part of BlogSphere and start your creative journey today.</h3>
+        <button onclick="window.location.href='blog-post-login-page.html'">Join Us</button>
+    </section>
+    <footer>
+        &copy; 2023 Blogsphere. All rights reserved.
+    </footer>
+</body>
+</html>

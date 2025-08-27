@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+</head>
+
+<body style="background-color: #777; color: white; font-family: 'Courier New', Courier, monospace;">
+    <h1 style="text-align: center;">Color change using Inputs</h1>
+    <div>
+        <label for="bg-input">Enter Color for background</label>
+        <input type="text" id="bg-input" name="bg-input">
+        <button id="bgApply">Click to apply BG</button>
+        <br>
+        <label for="text-input">Enter Color for text</label>
+        <input type="text" id="text-input" name="text-input">
+        <button id="textApply">Click to apply Text</button>
+    </div>
+</body>
+<script>
+    const bgInput = document.querySelector('#bg-input');
+    const bgBt = document.querySelector('#bgApply');
+    bgBt.addEventListener('click', (e) => {
+        const bgValue = bgInput.value;
+        if (bgValue) {
+            document.body.style.backgroundColor = `${bgValue}`;
+        } else {
+            alert('input field empty!');
+        }
+    })
+    const textInput = document.querySelector('#text-input');
+    const textBt = document.querySelector('#textApply');
+    textBt.addEventListener('click', (e) => {
+        const textValue = textInput.value;
+        if (textValue) {
+            document.body.style.color = `${textValue}`;
+        } else {
+            alert('input field empty!');
+        }
+    })
+</script>
+
+</html>

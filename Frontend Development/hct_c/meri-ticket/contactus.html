@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(106, 108, 150);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        .container {
+            margin: 10vh auto;
+            width: 50%;
+            max-width: 500px;
+            border: 2px solid rgb(106, 108, 150);
+            background-color: #fcfcfc;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .top {
+            background-color: rgb(106, 108, 150);
+            text-align: left;
+            padding: 15px 25px;
+            color: white;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .contact {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .normal {
+            font-size: 18px;
+        }
+
+        .main {
+            margin: 20px;
+        }
+
+        .name,
+        .email,
+        .subject,
+        .query {
+            margin-top: 20px;
+        }
+
+        .labelname,
+        .labelemail,
+        .yourquery,
+        .labelsubject {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            color: rgb(106, 108, 150);
+            margin-bottom: 5px;
+        }
+
+        #inputname,
+        #inputemail,
+        #selectsubject {
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid rgb(106, 108, 150);
+            margin-top: 8px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            font-size: 16px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: light;
+            box-sizing: border-box;
+            outline: none;
+            color: rgb(106, 108, 150);
+        }
+
+        #yourquery {
+            width: 100%;
+            height: 180px;
+            border-radius: 5px;
+            border: 1px solid rgb(106, 108, 150);
+            margin-top: 8px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            font-size: 16px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: light;
+            box-sizing: border-box;
+            outline: none;
+            resize: none;
+            color: rgb(106, 108, 150);
+        }
+
+        #selectsubject {
+            height: 40px;
+            color: rgb(106, 108, 150);
+        }
+
+        fieldset {
+            border: 2px solid rgb(106, 108, 150);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            border: 2px solid rgb(106, 108, 150);
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: rgb(106, 108, 150);
+        }
+
+        .submit,
+        .reset {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .submitbutton,
+        .resetbutton {
+            flex-grow: 1;
+            background-color: rgb(106, 108, 150);
+            height: 40px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .resetbutton {
+            background-color: #fcfcfc;
+            color: rgb(106, 108, 150);
+            border: 1px solid rgb(106, 108, 150);
+        }
+
+        .submitbutton:hover,
+        .resetbutton:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="top">
+            <div class="contact">Contact Form</div>
+            <div class="normal">Fill these basic details to contact</div>
+        </header>
+        <main class="main">
+            <form>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="name">
+                        <label for="inputname" class="labelname">Your Name:</label>
+                        <input type="text" id="inputname" placeholder="Your full Name">
+                    </div>
+                    <div class="email">
+                        <label for="inputemail" class="labelemail">Your Email:</label>
+                        <input type="email" id="inputemail" placeholder="Your Email">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Details</legend>
+                    <div class="subject">
+                        <label for="selectsubject" class="labelsubject">Subject:</label>
+                        <select id="selectsubject">
+                            <option value="" selected>Select</option>
+                            <option value="">Event details</option>
+                            <option value="">Ticket Query</option>
+                            <option value="">Refund details</option>
+                        </select>
+                    </div>
+                    <div class="query">
+                        <label for="yourquery" class="yourquery">Your Query:</label>
+                        <textarea id="yourquery" placeholder="Type your message here.."></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="submit" onclick="alert('Your message has been delivered')">
+                    <input type="submit" class="submitbutton" value="Submit">
+                    <input type="reset" class="resetbutton" value="Reset">
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>

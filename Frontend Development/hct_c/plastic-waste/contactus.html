@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="contactus.html" class="active">Contact us</a>
+            <div class="searchbox">
+                <input type="text" placeholder="Search..">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <header class="top">
+            <div class="contact">Contact Form</div>
+            <div class="normal">Fill these basic details to contact</div>
+
+        </header>
+        <main class="main">
+            <div class="name">
+                <label for="inputname" class="labelname">Your Name:</label>
+                <input type="text" id="inputname" placeholder="Your full Name">
+
+            </div>
+            <div class="email">
+                <label for="inputemail" class="labelemail">Your Email:</label>
+                <input type="email" id="inputemail" placeholder="Your Email">
+
+            </div>
+            <div class="subject">
+                <label for="selectsubject" class="labelsubject">Subject:</label>
+                <select name="" id="selectsubject">
+                    <option value="" selected>Select</option>
+                    <option value="">Cleaning Camps details</option>
+                    <option value="">Management Query</option>
+                    <option value="">Donation details</option>
+                    
+                </select>
+            </div>
+            <div class="query">
+                <label for="yourquery" class="yourquery">Your Query:</label>
+                <textarea name="" id="yourquery" cols="30" rows="10" placeholder="Type your message here.."></textarea>
+            </div>
+            <div class="submit" onclick="alert('Thank you for contacting us!')">
+                <input type="submit" class="submitbutton" value="Submit">
+            </div>
+            <div class="reset">
+                <input type="reset" class="resetbutton" value="Reset">
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footer">
+            <p>Copyright | Privacy Policy | Terms and Conditions</p>
+            <p>About | FAQ's</p>
+            <p>Helpdesk</p>
+            <div class="social_icons">
+            <p><a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a></p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meri Ticket - Book Your Ticket Now</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
+</head>
+
+<body>
+    <nav class="fnav">
+        <div class="left">
+            <span class="logo">Meri Ticket</span>
+            <input type="text" placeholder="Search for Movies, Event, Theater">
+            <button>Search</button>
+        </div>
+        
+        <div class="right">
+            <p>Location : <span style="color: beige; text-decoration: underline;">Jalandhar</span>
+                <div class="location-dropdown" id="locationDropdown">
+                    <ul>
+                        <li>Andhra Pradesh</li>
+                        <li>Arunachal Pradesh</li>
+                        <li>Assam</li>
+                    </ul>
+                </div>
+            </p>
+            <button class="login"><a href="login.html">Login</a></button>
+            <button><a href="signup.html">Sign up</a></button>
+            <i id="icon"="fa fa-bars"></i>
+        </div>
+        
+    </nav>
+    <nav class="sec-nav">
+        <div class="s-left">
+            <p class="home">Home</p>
+            <p><a href="event.html">Movie</a></p>
+            <p><a href="event.html">Event</a></p>
+        </div>
+        <div class="s-right">
+            <p><a href="contactus.html">Contact us</a></p>
+            <!-- <p>Previous Booking</p> -->
+        </div>
+    </nav>
+    <div class="main">
+        <img src="image\main image.png" alt="">
+        <button><a href="payment.html">BOOK NOW</a></button>
+    </div>
+    <div class="container">
+        <h2>Recommended Movies</h2>
+        <div class="card">
+            <img src="image\Recommended Movies 1.png" alt="">
+            <img src="image\recommended movies 2.png" alt="">
+            <img src="image\recommended movies 3.png" alt="">
+            <img src="image\recommended movie 4.png" alt="">
+            <img src="image\recommended movies 5.png" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <h2>Best of Live Events</h2>
+        <div class="card" id="card">
+            <img src="image\live image1.png" alt="">
+            <img src="image\live image 2.png" alt="">
+            <img src="image\live image 3.png" alt="">
+            <img src="image\live image 4.png" alt="">
+            <img src="image\live image 5.png" alt="">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="premiere">
+        <div class="container">
+            <h2>Premiere Movies</h2>
+            <div class="card">
+                <img src="image\premiere image 1.png" alt="11">
+                <img src="image\premiere image 2.png" alt="">
+                <img src="image\premiere image 3.png" alt="">
+                <img src="image\premiere image 4.png" alt="">
+                <img src="image\premiere image 5.png" alt="">
+            </div>
+        </div>
+        <div class="footer">
+            <span>Meri Ticket</span>
+            <div class="icon">
+                <i class="fa fa-youtube-play"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+        </div>
+        <div class="help-box" onclick="toggleSearchBar()">
+            <i class="fa fa-question"></i>
+        </div>
+        <div class="search-bar-container" id="searchBarInput">
+            <input type="text" placeholder="Search..." class="search-bar" id="searchBarInputgiven">
+            <button onclick="search()" class="search-button">Search</button>
+        </div>
+        <script src="JS/index.js"></script>
+        <script src="JS/search.js"></script>
+</body>
+
+</html>

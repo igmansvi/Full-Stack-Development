@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="userInput" placeholder="Enter GitHub username">
+            <button id="submitBtn">Search</button>
+        </div>
+        <div class="profile-container" style="display: none;">
+            <div class="profile"></div>
+            <div class="data"></div>
+        </div>
+    </div>
+    <!-- Sample data for userInput = "igmansvi"
+     API_call_returned_object
+        {
+            "login": "igmansvi",
+            "id": 122787819,
+            "node_id": "U_kgDOB1GX6w",
+            "avatar_url": "https://avatars.githubusercontent.com/u/122787819?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/igmansvi",
+            "html_url": "https://github.com/igmansvi",
+            "followers_url": "https://api.github.com/users/igmansvi/followers",
+            "following_url": "https://api.github.com/users/igmansvi/following{/other_user}",
+            "gists_url": "https://api.github.com/users/igmansvi/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/igmansvi/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/igmansvi/subscriptions",
+            "organizations_url": "https://api.github.com/users/igmansvi/orgs",
+            "repos_url": "https://api.github.com/users/igmansvi/repos",
+            "events_url": "https://api.github.com/users/igmansvi/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/igmansvi/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false,
+            "name": "Mansvi ",
+            "company": null,
+            "blog": "",
+            "location": null,
+            "email": null,
+            "hireable": null,
+            "bio": "coding | nothing to do!",
+            "twitter_username": null,
+            "public_repos": 3,
+            "public_gists": 0,
+            "followers": 3,
+            "following": 1,
+            "created_at": "2023-01-16T10:31:13Z",
+            "updated_at": "2024-12-06T13:55:17Z"
+        }
+     -->
+    <script src="./script.js"></script>
+</body>
+</html>

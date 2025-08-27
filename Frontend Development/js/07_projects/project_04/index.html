@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4</title>
+</head>
+<body style = "background-color: #777; color: #fff; font-family: 'Courier New', Courier, monospace; display: grid; place-items: center;">
+    <h1>Guess a Number!</h1>
+    <h3>Try and guess a number between 1 and 100</h3>
+    <h3>You have 10 attempts to guess the number</h3>
+    <form class = "form">
+        <label for = "guessField">Guess the number</label>
+        <input type = "text" id = "guessField" name = "guessField">
+        <button id = "submitButton">Submit</button>
+    </form>
+    <div class = "result">
+        <p>Previous Guesses: <span class="guesses"></span></p>
+        <p>Guesses remaining: <span class="guessCount">10</span></p>
+        <p class="lowOrHi"></p>
+    </div>
+    <div class="game" style="display: grid; place-items: center;">
+        <h3 class="end">End Game</h3>
+    </div>
+</body>
+<script>
+    const number = parseInt(Math.random()*100 + 1);
+
+    const submit = document.querySelector('#submitButton');
+    const userInput = document.querySelector('input[name="guessField"]');
+    const pguess = document.querySelector('.guesses');
+    const guessCount = document.querySelector('.guessCount');
+    const result = document.querySelector('.lowOrHi');
+    let totalGuessUsed = 0;
+    function validinput(num) {
+        if(num < 1 || num > 100 || num == '' || isNaN(num)) {
+            return true;
+        }
+        return false;
+    }
+    function displayMessage(num) {
+        if(num > userInput.value) {
+            return "Higher!";
+        } else if(num < userInput.value) {
+            return "Lower!";
+        } else {
+            return "Congrats! you guessed the right number!";
+        }
+    }
+    function endgame() {
+        const h1 = document.createElement('h1');
+        h1.innerText = "Thanks For Playing";
+        document.body.appendChild(h1);
+        document.querySelector('.form').remove();
+        document.querySelector('.result').remove();
+        document.querySelector('.game').remove();
+    }
+    document.querySelector('.end').addEventListener('click', (e) => {
+        endgame();
+    })
+    submit.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(totalGuessUsed == 10) {
+            result.innerHTML = `Game Over!`;
+            return;
+        }
+        if(!validinput(userInput)) {
+            alert('enter a valid number!');
+            return;
+        }
+        totalGuessUsed++;
+        let guessArr = [];
+        guessArr.push(userInput.value);
+        pguess.innerHTML = `${guessArr[0]}`;
+        guessCount.innerHTML = `${10 - totalGuessUsed}`;
+        result.innerHTML = `${displayMessage(number)}`;
+    })
+</script>
+</html>

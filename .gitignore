@@ -1,0 +1,15 @@
+# environment_variables
+.env
+.env.*
+
+# node_modules
+node_modules/
+
+# outputs
+build/
+dist/
+.next/
+out/
+
+# ide
+.vscode/

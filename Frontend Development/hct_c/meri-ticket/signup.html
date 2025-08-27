@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(106, 108, 150);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            margin: 10% auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            padding: 20px 0;
+            color: #333;
+        }
+
+        .main {
+            padding: 20px;
+        }
+
+        fieldset {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        legend {
+            font-size: 22px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .name,
+        .email,
+        .username,
+        .password,
+        .repeatpassword,
+        .term {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .labelname,
+        .labelemail,
+        .labelusername,
+        .labelpassword,
+        .labelrepeat,
+        .labelcheck {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        #inputname,
+        #inputemail,
+        #inputusername,
+        #inputpassword,
+        #repeatpassword {
+            width: calc(100% - 20px);
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px 10px;
+            box-sizing: border-box;
+        }
+
+        .term {
+            display: flex;
+            align-items: center;
+        }
+
+        #checkbox {
+            margin-right: 10px;
+        }
+
+        .signup {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            width: 100%;
+            height: 40px;
+            border-radius: 20px;
+            font-size: 18px;
+            background-color: #060933;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .already {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .span {
+            color: #fff;
+        }
+
+        .signin {
+            color: #fff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="top">
+            <div class="heading">Sign up</div>
+        </header>
+        <main class="main">
+            <form>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="name">
+                        <label for="inputname" class="labelname">Your Name</label>
+                        <input type="text" id="inputname" placeholder="Enter Name...">
+                    </div>
+                    <div class="email">
+                        <label for="inputemail" class="labelemail">Your Email</label>
+                        <input type="email" id="inputemail" placeholder="Enter Email">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Information</legend>
+                    <div class="username">
+                        <label for="inputusername" class="labelusername">Enter Username</label>
+                        <input type="text" id="inputusername" placeholder="Enter Username">
+                    </div>
+                    <div class="password">
+                        <label for="inputpassword" class="labelpassword">Enter Password</label>
+                        <input type="password" id="inputpassword" placeholder="Enter Password">
+                    </div>
+                    <div class="repeatpassword">
+                        <label for="repeatpassword" class="labelrepeat">Confirm Password</label>
+                        <input type="password" id="repeatpassword" placeholder="Confirm your Password">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Terms and Conditions</legend>
+                    <div class="term">
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox" class="labelcheck">I agree to terms and conditions</label>
+                    </div>
+                </fieldset>
+
+                <div class="signup">
+                    <input type="button" value="Sign Up" class="button">
+                </div>
+            </form>
+            <div class="already">
+                <span class="span">Already have an account? <a href="login.html" class="signin">Login Now!</a></span>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 5</title>
+</head>
+<body style="background-color: black; color: white; font-family: 'Courier New', Courier, monospace;">
+    <h1>Start:- Change color every Second</h1>
+    <h1>Stop:- Stop color change</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+     const colorChange = function randomColor() {
+        const hex = '0123456789abcdef'
+        let color = '#'
+        for(let i=0; i<6; i++) {
+            const index = parseInt(Math.random()*16);
+            color += hex[index];
+        }
+        document.body.style.backgroundColor = color;
+    }
+    let intervalId;
+    document.querySelector('#start').addEventListener('click', (e) => {
+        if(!intervalId) {
+            intervalId = setInterval(colorChange, 1000);
+        }
+    })
+    document.querySelector('#stop').addEventListener('click', (e) => {
+        clearInterval(intervalId);
+        intervalId = null; 
+    })
+</script>
+</html>

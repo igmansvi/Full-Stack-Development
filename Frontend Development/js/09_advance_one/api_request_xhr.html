@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api_request | AJAX | XMLHttpRequest</title>
+</head>
+<body style="background-color: #777; color: #fff;">
+    <!-- Asynchronous JavaScript and XML -->
+    <!-- XMLHttpRequest.readyState -->
+     <!-- Value State    Description
+     0     Unsent   Client has been created. open() and not called yet
+     1     Opened   open() has been called.
+     2     Headers_received send() has been called, and headers and status are available
+     3     Loading  Downloading; responseText holds partial data
+     4     Done     The operation is complete. -->
+</body>
+<script>
+    // a request has been sent to url and a data is fetched through xmlhttprequest method
+    // readystate shows the state of method
+    // onreadystatechange tracks the change of requestState
+    const requestUrl = 'https://api.github.com/users/igmansvi';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = () => {
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4) {
+            console.log(xhr.responseText);
+        }
+    }
+    xhr.send();
+</script>
+</html>

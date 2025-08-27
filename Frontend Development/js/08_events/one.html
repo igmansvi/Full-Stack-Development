@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM Events</title>
+</head>
+<body style = "background-color: black; color: white; padding: 25%">
+    <h1>Events</h1>
+    <div>
+        <ul id = "ul-1">
+            <li id = "1" onclick="alert('text-content-1')">text-content-1</li>
+            <li id = "2">text-content-2</li>
+            <li id = "3">text-content-3</li>
+            <li id = "4">text-content-4</li>
+            <li id = "5">text-content-5</li>
+        </ul>
+    </div>
+</body>
+<script>
+    const ul = document.querySelector('ul').children;
+    const ulArr = Array.from(ul);
+    // console.log(ulArr);
+    ulArr.forEach((item) => {
+        item.style.margin = '10%';
+        item.style.backgroundColor = 'white';
+        item.style.color = 'black';
+        item.style.padding = '2%';
+        item.style.borderRadius = '20px';
+    })
+    document.getElementById('2').onclick = () => {
+        alert("text-content-2");
+    }
+    document.getElementById('3').addEventListener('click', (e) => {
+        alert("text-content-3");
+    })
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shitKey, keyCode
+
+    // event-bubbling - topToBottom(true) | bottomToTop(false) or {eventObject}.stopPropagation() or {eventObject}.preventDefault()
+    document.getElementById('ul-1').addEventListener('click', (e) => {
+        console.log("clicked on ul-1");
+    }, false)
+    // document.getElementById('4').addEventListener('click', (e) => {
+    //     console.log("clicked on text-content-4");
+    // }, true)
+    document.getElementById('4').addEventListener('click', (e) => {
+        console.log("clicked on text-content-4");
+        e.stopPropagation();
+    }, false)
+    document.getElementById('5').addEventListener('click', (e) => {
+        console.log("clicked on text-content-5");
+        e.preventDefault();
+        e.stopPropagation();
+    }, false)
+    document.querySelector('#ul-1').addEventListener('click', (e) => {
+        console.log(e.target);
+        console.log(e.target.parentNode);
+        let removeNode = e.target;
+        if(e.target.id === '3') {
+            removeNode.remove();
+            console.log("removed text-content-3");
+        }
+    })
+</script>
+</html>
