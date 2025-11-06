@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>js & forms</title>
+</head>
+
+<body class="">
+    <!-- <form> -->
+    <div class="border border-gray-200 w-sm m-4 p-4 rounded-lg flex flex-col gap-4 bg-white shadow-xl shadow-gray-300">
+        <div class="flex justify-between">
+            <label for="name" class="font-bold">Name: </label>
+            <input class="border border-gray-300 px-4 rounded-lg font-extralight" type="text" id="name" ,
+                placeholder="enter your name">
+        </div>
+        <div class="flex justify-between">
+            <label for="email" class="font-bold">Email: </label>
+            <input class="border border-gray-300 px-4 rounded-lg font-extralight" type="email" id="email" ,
+                placeholder="enter your email">
+        </div>
+        <div class="flex justify-between">
+            <label for="phone" class="font-bold">Number: </label>
+            <input class="border border-gray-300 px-4 rounded-lg font-extralight" type="tel" id="phone" ,
+                placeholder="enter your number">
+        </div>
+        <div class="flex justify-center gap-4">
+            <button onclick="saveValue()"
+                class="border-0 px-4 rounded-2xl font-light bg-gray-300 hover:text-white hover:bg-blue-500">submit</button>
+            <button onclick="displayValue()"
+                class="border-0 px-4 rounded-2xl font-light bg-gray-300 hover:text-white hover:bg-blue-500">display</button>
+            <button onclick="resetValue()"
+                class="border-0 px-4 rounded-2xl font-light bg-gray-300 hover:text-white hover:bg-blue-500">reset</button>
+        </div>
+    </div>
+<!-- </form> -->
+<div id="root" class="border border-gray-200 w-sm m-4 p-4 rounded-lg bg-white shadow-xl shadow-gray-300">
+</div>
+</body>
+<script src="script.js"></script>
+<!-- <script>
+    (function cycleButtonColors() {
+        const buttons = document.querySelectorAll("button");
+        let currentIndex = 0;
+
+        setInterval(() => {
+            buttons.forEach((button, index) => {
+                if (index === currentIndex) {
+                    button.classList.remove("bg-gray-300", "hover:bg-blue-500");
+                    button.classList.add("bg-blue-500", "hover:bg-gray-300", "text-white");
+                } else {
+                    button.classList.remove("bg-blue-500", "hover:bg-gray-300", "text-white");
+                    button.classList.add("bg-gray-300", "hover:bg-blue-500");
+                }
+            });
+
+            currentIndex = (currentIndex + 1) % buttons.length;
+        }, 100);
+    })();
+
+    (function moveDivsAcrossScreen() {
+        const divs = Array.from(document.querySelectorAll('div'));
+        const states = divs.map(d => {
+            d.style.position = d.style.position || 'relative';
+            d.style.willChange = 'transform';
+            return { el: d, x: 0, dir: 1, max: Math.max(0, window.innerWidth - d.offsetWidth - 20) };
+        });
+
+        let last = performance.now();
+        function step(now) {
+            const dt = Math.min(50, now - last);
+            last = now;
+            const speed = 0.12;
+
+            states.forEach(s => {
+                s.x += s.dir * speed * dt;
+                if (s.x >= s.max) { s.x = s.max; s.dir = -1; }
+                else if (s.x <= 0) { s.x = 0; s.dir = 1; }
+                s.el.style.transform = `translateX(${Math.round(s.x)}px)`;
+            });
+
+            requestAnimationFrame(step);
+        }
+
+        requestAnimationFrame(step);
+
+        window.addEventListener('resize', () => {
+            states.forEach(s => s.max = Math.max(0, window.innerWidth - s.el.offsetWidth - 20));
+        });
+    })();
+
+    (function cycleInputColors() {
+        const inputs = document.querySelectorAll("input");
+        let currentIndex = 0;
+
+        setInterval(() => {
+            inputs.forEach((input, index) => {
+                if (index === currentIndex) {
+                    input.classList.remove("bg-white", "hover:bg-gray-200");
+                    input.classList.add("bg-blue-300", "hover:bg-blue-200");
+                } else {
+                    input.classList.remove("bg-blue-300", "hover:bg-blue-200");
+                    input.classList.add("bg-white", "hover:bg-gray-200");
+                }
+            });
+
+            currentIndex = (currentIndex + 1) % inputs.length;
+        }, 100);
+    })();
+
+    (function moveFormUpDown() {
+        const formDiv = document.querySelector('.border.border-gray-200.w-sm.m-4.p-4.rounded-lg.flex.flex-col.gap-4.bg-white.shadow-xl.shadow-gray-300');
+        if (!formDiv) return;
+
+        let y = 0;
+        let direction = 1;
+        const speed = 0.1; 
+        const maxY = 100;
+
+        formDiv.style.position = 'relative';
+        formDiv.style.willChange = 'transform';
+
+        let last = performance.now();
+        function step(now) {
+            const dt = Math.min(50, now - last);
+            last = now;
+
+            y += direction * speed * dt;
+            if (y >= maxY) {
+                y = maxY;
+                direction = -1;
+            } else if (y <= 0) {
+                y = 0;
+                direction = 1;
+            }
+
+            formDiv.style.transform = `translateY(${Math.round(y)}px)`;
+            requestAnimationFrame(step);
+        }
+
+        requestAnimationFrame(step);
+    })();
+    
+</script> -->
+</html>
